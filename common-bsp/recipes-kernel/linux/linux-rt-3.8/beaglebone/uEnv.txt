@@ -1,0 +1,4 @@
+devtree=/boot/am335x-bone.dtb
+dtboot=run mmcargs; ext2load mmc ${mmcdev}:2 ${loadaddr} ${bootfile} ; ext2load mmc ${mmcdev}:2 ${fdtaddr} ${devtree} ; bootm ${loadaddr} - ${fdtaddr}
+uenvcmd=run dtboot
+optargs=consoleblank=0
